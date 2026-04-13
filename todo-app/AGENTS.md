@@ -1,5 +1,5 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+<!-- nextjs-agent-rules 開始 -->
+# いつもの Next.js とは限らない
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+このバージョンには破壊的変更があります。API・慣習・ディレクトリ構成は、学習データ上の Next.js と異なる場合があります。コードを書く前に `node_modules/next/dist/docs/` の該当ガイドを読み、非推奨の案内に従ってください。
+<!-- nextjs-agent-rules 終了 -->

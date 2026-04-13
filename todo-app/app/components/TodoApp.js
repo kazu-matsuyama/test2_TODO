@@ -40,11 +40,11 @@ function writeToStorage(items) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   } catch {
-    /* ignore */
+    /* 保存失敗時は無視（クォータ等） */
   }
 }
 
-/** In-memory cache + listeners so useSyncExternalStore sees updates after writes. */
+/** メモリ上のキャッシュと購読者。書き込み後も useSyncExternalStore が更新を検知できるようにする。 */
 function createTodoStore() {
   let items = null;
   const listeners = new Set();
@@ -75,7 +75,7 @@ function createTodoStore() {
 
 const store = createTodoStore();
 
-/** Stable reference for SSR / hydration (React requires getServerSnapshot to be cached). */
+/** SSR／ハイドレーション用の安定参照（getServerSnapshot はキャッシュされた参照が必要）。 */
 const EMPTY_SERVER_ITEMS = [];
 
 function subscribeTodoStore(onChange) {
